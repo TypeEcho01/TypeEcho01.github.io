@@ -1,0 +1,95 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body 
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+/* Standard text-settings below */
+html 
+{
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+body 
+{
+	font-family: Helvetica, Arial, sans-serif;
+	background: linear-gradient(
+		180deg, 
+		rgb(48, 48, 48) 0%, 
+		rgb(16, 16, 16) 50%, 
+		rgb(48, 48, 48) 100%
+	);
+	color: rgb(255, 255, 255);
+	margin: 5vh 5vw;
+}
+
+#container 
+{
+	border: 1px solid rgb(0, 0, 0);
+	background: linear-gradient(
+		180deg, 
+		rgb(64, 64, 64) 0%, 
+		rgb(96, 96, 96) 50%, 
+		rgb(64, 64, 64) 100%
+	);
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+nav ul
+{
+	list-style: none;
+	padding-left: 0px;
+}
+
+nav.horizontal li
+{
+	display: inline;
+}
+
+nav a
+{
+	color: rgb(0, 191, 255);
+	border: 1px solid rgb(191, 191, 191);
+	background: linear-gradient(
+		180deg, 
+		rgb(48, 48, 48) 0%, 
+		rgb(16, 16, 16) 50%, 
+		rgb(48, 48, 48) 100%
+	);
+	text-decoration: none;
+	padding: 0.4em;
+	display: inline-block;
+	border-radius: 10%;
+}
+
+nav a:hover
+{
+	color: rgb(0, 255, 255);
+	border: 1px solid rgb(255, 255, 255);
+	background: linear-gradient(
+		180deg, 
+		rgb(64, 64, 64) 0%, 
+		rgb(32, 32, 32) 50%, 
+		rgb(64, 64, 64) 100%
+	);
+}
+
+figure
+{
+	margin: 0px;
+}
+
+figure img
+{
+	width: 100%;
+}
+
+figcaption, footer
+{
+	font-size: 0.75em;
+}
