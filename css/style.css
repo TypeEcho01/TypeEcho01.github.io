@@ -38,6 +38,22 @@ body
 	width: 90%;
 	max-width: 1000px;
 	margin: auto;
+	padding: 1vh 1vw;
+}
+
+header
+{
+	text-align: center;
+}
+
+main header
+{
+	text-align: left;
+}
+
+nav.horizontal
+{
+	text-align: center;
 }
 
 nav ul
@@ -51,9 +67,18 @@ nav.horizontal li
 	display: inline;
 }
 
-nav a
+a
 {
 	color: rgb(0, 191, 255);
+}
+
+a:hover
+{
+	color: rgb(140, 140, 255);
+}
+
+nav a
+{
 	border: 1px solid rgb(191, 191, 191);
 	background: linear-gradient(
 		180deg, 
@@ -87,9 +112,15 @@ figure
 figure img
 {
 	width: 100%;
+	border:1px solid rgb(0, 0, 0);
 }
 
-figcaption, footer
+figcaption
 {
 	font-size: 0.75em;
+}
+
+footer
+{
+	font-size: 0.67em;
 }
