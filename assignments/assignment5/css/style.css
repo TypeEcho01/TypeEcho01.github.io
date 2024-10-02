@@ -1,0 +1,187 @@
+/*
+Echo Schwartz
+Assignment 5: CSS Animation Magic
+Fall 2024
+*/
+
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+/* Standard text-settings below */
+html 
+{
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+body
+{
+	background: #000000;
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center	;
+}
+
+#container
+{
+	margin: auto;
+	width: 90vh;
+	height: 90vh;
+}
+
+nav.horizontal
+{
+	text-align: center;
+}
+
+nav ul
+{
+	list-style: none;
+	padding-left: 0px;
+}
+
+nav.horizontal li
+{
+	display: inline;
+}
+
+nav a.fast
+{
+	color: #ff0000;
+}
+
+nav a.normal
+{
+	color: #00ff00;
+}
+
+nav a.slow
+{
+	color: #0000ff;
+}
+
+nav a
+{
+	border: 1px solid #dddddd;
+	background: #222222;
+	text-decoration: none;
+	padding: 0.4em;
+	display: inline-block;
+	border-radius: 10%;
+	transition: 125ms;
+}
+
+nav a:hover
+{
+	background: #303030;
+}
+
+/* 
+Probably not the best way to do the different speeds 
+but I can't think of a different solution and this works
+ */
+
+/* Normal */
+#rainbowNormal
+{
+	padding-top: 5vh;
+	position: relative;
+	border: 1px solid #111111;
+}
+
+#rainbowNormal div
+{
+	position: absolute;
+	border: 1px solid #111111;
+	width: 7.5vh;
+	height: 90vh;
+	top: 0px;
+	background: #000000;
+	transition: 30s;
+}
+
+#rainbowNormal div:hover
+{
+	transition: 50ms;
+}
+
+/* Fast */
+#rainbowFast
+{
+	padding-top: 5vh;
+	position: relative;
+	border: 1px solid #111111;
+}
+
+#rainbowFast div
+{
+	position: absolute;
+	border: 1px solid #111111;
+	width: 7.5vh;
+	height: 90vh;
+	top: 0px;
+	background: #000000;
+	transition: 10s;
+}
+
+#rainbowFast div:hover
+{
+	transition: 50ms;
+}
+
+/* Slow */
+#rainbowSlow
+{
+	padding-top: 5vh;
+	position: relative;
+	border: 1px solid #111111;
+}
+
+#rainbowSlow div
+{
+	position: absolute;
+	border: 1px solid #111111;
+	width: 7.5vh;
+	height: 90vh;
+	top: 0px;
+	background: #000000;
+	transition: 60s;
+}
+
+#rainbowSlow div:hover
+{
+	transition: 50ms;
+}
+
+/* hover colors */
+#a:hover {background: #ff0000;}
+#b:hover {background: #ff8800;}
+#c:hover {background: #ffff00;}
+#d:hover {background: #88ff00;}
+#e:hover {background: #00ff00;}
+#f:hover {background: #00ff88;}
+#g:hover {background: #00ffff;}
+#h:hover {background: #0088ff;}
+#i:hover {background: #0000ff;}
+#j:hover {background: #8800ff;}
+#k:hover {background: #ff00ff;}
+#l:hover {background: #ff0088;}
+
+/* alignmemts */
+#a {left: 0vh;}
+#b {left: 7.5vh;}
+#c {left: 15vh;}
+#d {left: 22.5vh;}
+#e {left: 30vh;}
+#f {left: 37.5vh;}
+#g {left: 45vh;}
+#h {left: 52.5vh;}
+#i {left: 60vh;}
+#j {left: 67.5vh;}
+#k {left: 75vh;}
+#l {left: 82.5vh;}
