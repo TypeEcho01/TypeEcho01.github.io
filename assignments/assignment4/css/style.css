@@ -1,0 +1,175 @@
+/*
+Echo Schwartz
+Assignment 4: Typographical Design
+Fall 2024
+*/
+
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body 
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+/* Standard text-settings below */
+html 
+{	
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+body 
+{
+	font-family: "Nanum Myeongjo", serif;
+}
+
+#container 
+{
+	position: relative;
+}
+
+span.This
+{
+	color: #0000ff;
+	font-size: 300px;
+	position: absolute;
+	top: 200px;
+	left: 250px;
+	rotate: 10deg;
+	font-weight: 300;
+	text-shadow: 
+		40px 40px 10px #000000,
+		20px 20px 10px #c2c2ff;
+}
+
+span.is
+{
+	color: #0000ff5b;
+	font-size: 700px;
+	position: absolute;
+	top: 350px;
+	left: 1500px;
+	rotate: 145deg;
+	font-weight: 900;
+}
+
+span.Cascading
+{
+	color: #0000ff;
+	font-size: 125px;
+	position: absolute;
+	top: 500px;
+	left: 400px;
+	rotate: -10deg;
+	font-weight: 100;
+	text-shadow: 
+		50px 50px 5px #0000d3,
+		100px 100px 10px #00009b,
+		200px 200px 20px #000063,
+		400px 400px 40px #000031,
+		800px 800px 80px #000000;
+}
+
+span.Style
+{
+	color: #3333c2;
+	font-size: 1500px;
+	position: absolute;
+	top: 550px;
+	left: 425px;
+	rotate: -10deg;
+	font-weight: 400;
+	font-family: "Norican", cursive;
+}
+
+span.S
+{
+	color: #00005f;
+	font-size: 475px;
+	position: absolute;
+	top: 625px;
+	left: 200px;
+	rotate: 0deg;
+	font-weight: 700;
+}
+
+span.h
+{
+	color: #00004d;
+	font-size: 475px;
+	position: absolute;
+	top: 725px;
+	left: 400px;
+	rotate: 5deg;
+	font-weight: 700;
+}
+
+span.e
+{
+	color: #00003a;
+	font-size: 475px;
+	position: absolute;
+	top: 825px;
+	left: 600px;
+	rotate: 10deg;
+	font-weight: 700;
+}
+
+span.e2
+{
+	color: #00002e;
+	font-size: 475px;
+	position: absolute;
+	top: 925px;
+	left: 800px;
+	rotate: 15deg;
+	font-weight: 700;
+}
+
+span.t
+{
+	color: #00001f;
+	font-size: 475px;
+	position: absolute;
+	top: 1025px;
+	left: 1000px;
+	rotate: 20deg;
+	font-weight: 700;
+}
+
+span.s
+{
+	color: #000000;
+	font-size: 475px;
+	position: absolute;
+	top: 1125px;
+	left: 1200px;
+	rotate: 25deg;
+	font-weight: 700;
+}
+
+span.charPeriod
+{
+	color: #0000d1;
+	font-size: 950px;
+	position: absolute;
+	top: 1125px;
+	left: 1200px;
+	rotate: 0deg;
+	font-weight: 900;
+}
+
+header
+{
+	position: fixed;
+	top: 50px;
+	left: 0px;
+}
+
+footer
+{
+	position: fixed;
+	bottom: 50px;
+	right: 0px;
+}
