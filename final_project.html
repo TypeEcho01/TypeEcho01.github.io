@@ -7,6 +7,8 @@
 		<title>Echo's Class Portfolio</title>
 		
 		<link rel="stylesheet" href="css/style.css">	
+
+		<script src="js/script.js"></script>
 	</head>
 
 	<body>
@@ -20,8 +22,8 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about_me.html">About Me</a></li>
-				  <li><a href="assignments.html">Assignments</a></li>
-				  <li><a href="final_project.html">Final Project</a></li>
+				 	<li><a href="assignments.html">Assignments</a></li>
+					<li><a href="final_project.html">Final Project</a></li>
 			  </ul>
 			</nav>
 			
@@ -33,7 +35,7 @@
 				<nav>
 					<ul>
 						<li><a href="final_project_components/files/FinalProjectProposal.pdf">Proposal</a></li>
-						<li><a href="final_project_components/index.html">Assets</a></li>
+						<li><a href="final_project_components/files/AssetsDelivery.pdf">Assets</a></li>
 						<li><a href="final_project_components/index.html">Rapid Prototype</a></li>
 						<li><a href="final_project_components/index.html">Wireframes</a></li>
 						<li><a href="final_project_components/index.html">Style Guide</a></li>
@@ -45,8 +47,9 @@
 			</main>
 			
 			<footer>
-				<p>&#169; Echo Schwartz, 2024</p>
-			</footer>
+				<p><span id="footer"></span></p>
+				<script>setElement("footer", getFooter())</script>
+			</footer>	
 		</div><!-- close "container" -->
 	</body>
 </html>
