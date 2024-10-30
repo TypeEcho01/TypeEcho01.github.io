@@ -1,0 +1,158 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body 
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+/* Standard text-settings below */
+html 
+{
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+body 
+{
+	background: #1b2c1b;
+	color: #ffefcb;
+	font-family: "Signika Negative", sans-serif;
+}
+
+#container 
+{
+	padding: 20px;
+}
+
+section
+{
+	border: 1px solid #000000;
+	margin-bottom: 2em;
+}
+
+header, footer
+{
+	background: #4be6f1;
+	color: #1b2c1b;
+	font-family: "Rowdies", sans-serif;
+	text-align: center;
+}
+
+header
+{
+	padding: 10px;
+	font-size: 2em;
+	line-height: 1.6em;
+}
+
+main header
+{
+	background: none;
+	font-size: 1.2em;
+}
+
+section#authorContent
+{
+	background: rgba(4, 22, 4, 0.9);
+}
+
+section#authorContent header
+{
+	color: #ff6738;
+}
+
+section#myContent
+{
+	background: rgba(6, 36, 6, 0.9);
+}
+
+section#myContent header
+{
+	color: #389bff;
+}
+
+main
+{
+	padding: 20px;
+}
+
+p
+{
+	margin: 15px;
+}
+
+a
+{
+	color: #00ffff;
+}
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) 
+{
+	body
+	{
+		background: #1b2c1b;
+		background: url(../img/ollie-in-nature.jpg) no-repeat fixed center;
+		background-size: cover;
+	}
+
+	#container
+	{
+		width: 725px;
+		/* margin: auto; */
+	}
+
+	header, footer
+	{
+		background: none;
+	}
+
+	#container>header, footer
+	{
+		color: #4be6f1;
+		padding: 0px;
+	}
+
+	header
+	{
+		text-align: left;
+	}
+
+	footer 
+	{
+		text-align: right;
+	}
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) 
+{
+	#container
+	{
+		width: 1000px;
+	}
+
+	section#authorContent
+	{
+		float: left;
+		width: 33%;
+	}
+
+	section#myContent
+	{
+		float: right;
+		width: 33%;
+	}
+
+	footer 
+	{
+		clear: both;
+	}
+} /* closes 1024px+ */
