@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<meta charset="utf-8">
-		
-		<title>Assignment 7</title>
-		
-		<link rel="stylesheet" href="style.css">	
-	</head>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Assignment 7: CSS Flexbox</title>
+        
+        <link rel="stylesheet" href="css/style.css">	
+        <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Norican&display=swap" rel="stylesheet">
+
+        <script src="js/script.js"></script>
+    </head>
 
     <body>
-        <header>
-            <h1>Assignment 7 is under construction</h1>
-        </header>
+        <div id="container">
+            <header>
+                <h1>Assignment 7: CSS Flexbox</h1>
+            </header>
 
-        <main>
-            <p>Please check back later!</p>
-        </main>
+            <main>
+                <section class="paragraphs">
+                    <p>
+                        The fictitious truth is that cloning is real, and my company can clone people for you! A
+                        fictitious truth is something that has a lot of made-up evidence surrounding it so that the
+                        concept appears to be true but is actually false. The concept of a fake cloning facility and a
+                        company that specializes in this is of interest to me because cloning is a cool and fun
+                        concept, and I think I can do a lot with this concept. Cloning could lead to lots of
+                        interesting possibilities as well as questions about the morality of it.
+                    </p>
 
-        <footer>
-            <a href="../../assignments.html">Go Back</a>
-        </footer>
+                    <p>
+                        This project could become a "benevolent untruth" because it would be a funny website to
+                        show people. It would be so absurd that no one in their right mind would believe that it is a
+                        real thing if you investigated it, but it would look professional enough to look like an official
+                        website if you squinted your eyes. It would be like The Onion, a notorious parody fake news
+                        website that could look like a real source if you were to glance at it for a second and didn't
+                        do research into what The Onion is or what the content is in the news post, or look at the
+                        finer details of the content, such as the sources they cite. Overall, it would be a website to
+                        bring laughter to people, despite being a lie.
+                    </p>
+                </section>
+
+                <section class="video">
+                    <figure class="responsive">
+                        <iframe
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/NoyeCMmP5tw?si=hVHf96nvgfAxbZr0" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </figure>
+                </section>
+                
+                <section class="image">
+                    <figure>
+                        <img src="img/clones.webp">
+                        <figcaption><a href="https://i.pinimg.com/originals/9e/ce/0d/9ece0d0ffc2c75908df12b06298ad349.jpg">Source</a></figcaption>
+                    </figure>
+                </section>   
+            </main>
+
+            <footer>
+				<p><span id="footer"></span></p>
+				<script>setElement("footer", getFooter())</script>
+			</footer>	
+        </div><!-- close "container" -->
     </body>
-</html>
+</html> 
