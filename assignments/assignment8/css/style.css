@@ -1,0 +1,207 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body 
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+/* Standard text-settings below */
+html 
+{
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+body 
+{
+	background: radial-gradient(circle, rgba(51, 51, 51, 1) 0%, rgba(0, 0, 0, 1) 100%);
+	color: rgba(255, 255, 255, 1);
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#container 
+{
+	padding: 10px;
+}
+
+main
+{
+	display: flex;
+	flex-direction: column;
+}
+
+h1, h2
+{
+	color: rgba(255, 128, 0, 1);
+}
+
+footer
+{
+	font-size: 0.75em;
+	text-align: right;
+}
+
+a 
+{
+	color: rgba(255, 128, 0, 1);
+	transition: 333ms;
+}
+
+a:hover
+{
+	color: rgba(255, 192, 0, 1);
+}
+
+figure
+{
+	margin: 0px;
+}
+
+figcaption
+{
+	margin: 10px;
+	padding-bottom: 10px;
+}
+
+img
+{
+	max-width: 100%;
+	min-width: 100%;
+}
+
+button 
+{
+	background: rgba(255, 128, 0, 1);
+	color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(255, 255, 255, 1);
+	width: 100%;
+	justify-content: center;
+	transition: 333ms;
+	height: 50px;
+	font-size: 1.25em;;
+}
+
+button:hover
+{
+	background: rgba(255, 192, 0, 1);
+}
+
+section#heroes
+{
+	font-size: 0.85em;
+	padding: 5px;
+}
+
+#mainContent
+{
+	width: 100%;
+}
+
+#promotionalImage, #heroes
+{
+	border: 1px solid rgba(255, 255, 255, 1);
+}
+
+div.expandable
+{
+	width: 100%;
+}
+
+figure.responsive 
+{
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe 
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+	border: 1px solid rgba(255, 255, 255, 1);
+}
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* For small screens. */
+@media all and (min-width: 1024px) 
+{
+	body 
+	{
+		background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(51, 51, 51, 1) 100%);
+	}
+
+	#container 
+	{
+		background: radial-gradient(circle, rgba(51, 51, 51, 1) 0%, rgba(0, 0, 0, 1) 100%);
+		border: 2px solid rgba(255, 255, 255);
+		margin: 25px;
+	}
+
+	main
+	{
+		flex-direction: row;
+		gap: 10px;
+	}
+
+	div#expandableElements
+	{
+		flex: 1 1 500%;
+	}
+} /* closes 1024px+ */
+
+/* For small-medium screens. */
+@media all and (min-width: 1400px) 
+{
+
+	div#expandableElements
+	{
+		flex: 1 1 400%;
+	}
+} /* closes 1400px+ */
+
+/* For medium screens. */
+@media all and (min-width: 1600px) 
+{
+
+	div#expandableElements
+	{
+		flex: 1 1 300%;
+	}
+} /* closes 1600px+ */
+
+/* For medium-large screens. */
+@media all and (min-width: 1800px) 
+{
+
+	div#expandableElements
+	{
+		flex: 1 1 200%;
+	}
+} /* closes 1800px+ */
+
+/* For large screens. */
+@media all and (min-width: 1920px) 
+{
+	div#expandableElements
+	{
+		flex: 1 1 1250%;
+	}
+
+	div#expandableElements 
+	{
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+	}
+} /* closes 1920px+ */

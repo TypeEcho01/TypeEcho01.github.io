@@ -3,23 +3,148 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		
-		<title>Assignment 8</title>
+		<title>Overwatch Classic</title>
 		
-		<link rel="stylesheet" href="style.css">	
+		<link rel="stylesheet" href="css/style.css">	
+		<link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Norican&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+		<!-- <script src="js/script.js"></script> -->
 	</head>
 
-    <body>
-        <header>
-            <h1>Assignment 8 is under construction</h1>
-        </header>
+	<body>
+		<div id="container">
+			<header>
+				<h1>Overwatch Classic</h1>
+			</header>
 
-        <main>
-            <p>Please check back later!</p>
-        </main>
+			<main>
+				<div>
+					<section id="mainContent">
+						<p>
+							Overwatch Classic is a gamemode in Overwatch 2 available from 12 November 2024 to 2 December 2024. 
+							This mode puts players into 6v6 combat featuring only the heroes and maps from the release of Overwatch 1. 
+							All of the heroes have had their abilities restored to their first versions. 
+							This is the first time that Overwatch 2 has had an offical gamemode with 6 players on each team.
+							Only the Overwatch 1 default skins are available to use, and the HUD icons feature the Overwatch 1 art.
+							There are plans to bring other patches to the game, including during the Moth Meta and GOATS eras.
+						</p>
+						<a href="https://overwatch.blizzard.com/en-us/news/24146047/a-blast-to-the-past-begins-with-overwatch-classic/">Blog Post</a>
+					</section>
+				</div>
 
-        <footer>
-            <a href="../../assignments.html">Go Back</a>
-        </footer>
-    </body>
+				<br>
+
+				<div id="expandableElements">
+					<div class="expandable">
+						<button id="promotionalImageButton">Promotional Image</button>
+	
+						<figure id="promotionalImage">
+							<img src="img/Overwatch-Classic.avif">
+							<figcaption>Courtesy of <a href="https://www.blizzard.com/en-us/">Blizzard Entertainment</a></figcaption>
+						</figure>
+					</div>
+	
+					<br>
+						
+					<div class="expandable">
+						<button id="heroesButton">Heroes</button>
+						<section id="heroes">
+							<h2>Tank Heroes</h2>
+							<ul>
+								<li>D.Va</li>
+								<li>Reinhardt</li>
+								<li>Roadhog</li>
+								<li>Winston</li>
+								<li>Zarya</li>
+							</ul>
+	
+							<h2>Offense Heroes</h2>
+							<ul>
+								<li>Cassidy</li>
+								<li>Genji</li>
+								<li>Pharah</li>
+								<li>Reaper</li>
+								<li>Soldier: 76</li>
+								<li>Tracer</li>
+							</ul>
+	
+							<h2>Defense Heroes</h2>
+							<ul>
+								<li>Bastion</li>
+								<li>Hanzo</li>
+								<li>Junkrat</li>
+								<li>Mei</li>
+								<li>Torbjörn</li>
+								<li>Widowmaker</li>
+							</ul>
+	
+							<h2>Support Heroes</h2>
+							<ul>
+								<li>Lúcio</li>
+								<li>Mercy</li>
+								<li>Symmetra</li>
+								<li>Zenyatta</li>
+							</ul>
+						</section>
+					</div>
+					
+					<br>
+	
+					<div class="expandable">
+						<button id="trailerButton">Trailer</button>
+	
+						<figure id="trailer" class="responsive">
+							<iframe 
+							width="560" 
+							height="315" 
+							src="https://www.youtube.com/embed/kBj4SCL4PNo?si=jtpSbiMoMYmJdexV" 
+							title="YouTube video player" 
+							frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							referrerpolicy="strict-origin-when-cross-origin" 
+							allowfullscreen>
+							</iframe>
+						</figure>
+					</div>
+				</div>
+			</main>
+
+			
+
+			<footer>
+				<p id="footer"></p>
+			</footer>
+		</div><!-- close "container" -->
+	
+		<!-- Link to jQuery on Google CDN-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<script>
+			// Hide expanded elements
+			$("#promotionalImage").hide();
+			$("#heroes").hide();
+			$("#trailer").hide();
+
+			// Set footer with current year
+			$("#footer").html(`&#169; Echo Schwartz, ${new Date().getFullYear()}`);
+
+			// Document loaded
+			$(document).ready(function() {
+				$("#promotionalImageButton").click(function() {
+					$("#promotionalImage").slideToggle();
+				});
+
+				$("#heroesButton").click(function() {
+					$("#heroes").slideToggle();
+				});
+
+				$("#trailerButton").click(function() {
+					$("#trailer").slideToggle();
+				});
+			}); //close .ready()
+		</script>
+	</body>
 </html>
