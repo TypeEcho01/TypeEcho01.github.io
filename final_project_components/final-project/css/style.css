@@ -1,0 +1,338 @@
+/* Define global variables */
+:root
+{
+	--turquoise: rgba(28, 145, 172, 1);
+	--lightBlue: rgba(154, 202, 243, 1);
+	--blueWhite: rgba(240, 245, 255, 1);
+	--blueBlack: rgba(0, 15, 50, 1);
+	--purple: rgba(100, 33, 255, 1);
+	--darkPurple: rgba(40, 0, 135, 1);
+	--white: rgba(255, 255, 255, 1);
+	--black: rgba(0, 0, 0, 1);
+
+	--topBarHeight: 67px;
+	--leftBarWidth: 67px;
+
+	--topBarFontSize: 10px;
+	--leftBarFontSize: 10px;
+
+	--fontFamilies: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", "Roboto", "Arial", sans-serif;
+}
+
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body 
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+/* Standard text-settings below */
+html 
+{
+	font-family: var(--fontFamilies);
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+h1 
+{
+	font-size: 4em;
+	line-height: 1em;
+}
+
+footer 
+{
+	justify-self: right;
+	font-size: 0.5em;
+}
+
+figure figcaption 
+{
+	font-size: 0.75em;
+    line-height: 1.05em;
+}
+
+body 
+{
+	padding-top: 100px;
+}
+
+#container 
+{
+	padding: 10px;
+}
+
+a 
+{
+	color: var(--lightBlue);
+}
+
+figure
+{
+	margin: 0px;
+}
+
+figure img
+{
+	width: 100%;
+	height: 100%;
+}
+
+img.placeholder
+{
+	border: 1px solid var(--black);
+}
+
+#topBar 
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: var(--topBarHeight);
+	background: var(--blueBlack);
+	display: flex;
+	justify-content: space-between;
+	z-index: 1001; /* Ensures the bar stays on top of other elements */
+}
+
+#topBar figure 
+{
+	height: 100%;
+	aspect-ratio: 1 / 1; /* Forces the figure to be a square */
+}
+
+#leftBar 
+{
+	display: none; /* Start off hidden */
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: var(--leftBarWidth);
+	height: 100%; /* Full height of the viewport */
+	background-color: var(--blueBlack);
+	z-index: 1000; /* Ensures the bar stays on top of other elements except the topBar */
+	color: var(--blueWhite);
+	box-sizing: border-box;
+}
+
+#leftBar nav ul
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	height: 100vh;
+}
+
+#topBar button
+{
+	background: var(--blueWhite);
+	color: var(--blueBlack);
+	border: 2px solid var(--blueBlack);
+	height: 100%;
+	aspect-ratio: 1 / 1; /* Forces the button to be a square */
+	cursor: pointer; /* Pointer to tell the user that it is clickable */
+	font-size: var(--topBarFontSize);
+	font-family: var(--fontFamilies);
+	transition: 250ms;
+}
+
+#leftBar a
+{
+	display: inline-block;
+	text-align: center;
+    text-decoration: none;
+	background: var(--blueWhite);
+	color: var(--blueBlack);
+	width: 100%;
+	aspect-ratio: 1 / 1; /* Forces the anchor to be a square */
+	cursor: pointer; /* Pointer to tell the user that it is clickable */
+	font-size: var(--leftBarFontSize);
+	font-family: var(--fontFamilies);
+	transition: 250ms;
+}
+
+#topBar button:hover, #leftBar a:hover
+{
+	filter: brightness(90%);
+	transform: scale(0.98);
+}
+
+#leftBar ul li 
+{
+	border: 2px solid var(--blueBlack);
+}
+
+#leftBar ul li figure 
+{
+	width: 100%;
+	aspect-ratio: 1 / 1; /* Forces the figure to be a square */
+}
+
+.lightBlueBox, .turquoiseBox, .purpleBox, .darkPurpleBox
+{
+	border: 1px solid var(--blueBlack);
+	padding: 5px 5px;
+}
+
+.lightBlueBox 
+{
+	background: var(--lightBlue);
+}
+
+.turquoiseBox 
+{
+	background: var(--turquoise);
+}
+
+.purpleBox
+{
+	background: var(--purple);
+	color: var(--white);
+}
+
+.darkPurpleBox
+{
+	background: var(--darkPurple);
+	color: var(--white);
+}
+
+.lightBlueBox a, .turquoiseBox a
+{
+	color: var(--purple);
+}
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) 
+{
+	#container
+	{
+		padding: 20px;
+		display: flex;
+ 		justify-content: space-between;
+		gap: 10px;
+	}
+
+	/* Remove the top bar */
+	#topBar 
+	{
+		display: none;
+	}
+
+	body 
+	{
+		padding-top: 0px; /* Since there is no more topBar, move content back up */
+		padding-left: var(--leftBarWidth); /* Now the leftBar is always visible, so move the content right */
+	}
+
+	header figure 
+	{
+		max-width: 50%;
+	}
+
+	#leftSection 
+	{
+		flex: 3; /* 60% */
+	}
+	
+	#rightSection 
+	{
+		flex: 2; /* 40%*/
+	}
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) 
+{
+	:root 
+	{
+		--topBarHeight: 96px;
+		--leftBarWidth: 96px;
+
+		--topBarFontSize: 15px;
+		--leftBarFontSize: 15px;
+	}
+
+	#leftBar nav ul
+	{
+		justify-content: flex-start;
+	}
+
+	html 
+	{
+		font-size: 1.125em;
+		line-height: 1.67em;
+	}
+
+	h1 
+	{
+		font-size: 5em;
+	}
+
+	footer 
+	{
+		font-size: 0.59em;
+	}
+
+	figure figcaption 
+	{
+		font-size: 0.88em;
+		line-height: 1.25em;
+	}
+
+	#leftSection 
+	{
+		flex: 2; /* 67% */
+	}
+	
+	#rightSection 
+	{
+		flex: 1; /* 33%*/
+	}
+} /* closes 1024px+ */
+
+/* For large desktop screen. */
+@media all and (min-width: 1400px) 
+{
+	:root 
+	{
+		--topBarHeight: 125px;
+		--leftBarWidth: 125px;
+
+		--topBarFontSize: 20px;
+		--leftBarFontSize: 20px;
+	}
+
+	html 
+	{
+		font-size: 1.25em;
+		line-height: 1.75em;
+	}
+
+	h1 
+	{
+		font-size: 6em;
+	}
+
+	footer 
+	{
+		font-size: 0.67em;
+	}
+
+	figure figcaption 
+	{
+		font-size: 1em;
+		line-height: 1.4em;
+	}
+} /* closes 1400px+ */
