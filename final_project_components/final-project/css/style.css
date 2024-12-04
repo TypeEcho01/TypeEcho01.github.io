@@ -10,11 +10,11 @@
 	--white: rgba(255, 255, 255, 1);
 	--black: rgba(0, 0, 0, 1);
 
-	--topBarHeight: 67px;
-	--leftBarWidth: 67px;
+	--topBarHeight: 100px;
+	--leftBarWidth: 100px;
 
-	--topBarFontSize: 10px;
-	--leftBarFontSize: 10px;
+	--topBarFontSize: 15px;
+	--leftBarFontSize: 15px;
 
 	--fontFamilies: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", "Roboto", "Arial", sans-serif;
 }
@@ -123,7 +123,7 @@ img.placeholder
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
@@ -257,16 +257,11 @@ You can adjust the min-width numbers below, and add as many new media queries as
 {
 	:root 
 	{
-		--topBarHeight: 96px;
-		--leftBarWidth: 96px;
+		--topBarHeight: 115px;
+		--leftBarWidth: 115px;
 
-		--topBarFontSize: 15px;
-		--leftBarFontSize: 15px;
-	}
-
-	#leftBar nav ul
-	{
-		justify-content: flex-start;
+		--topBarFontSize: 18px;
+		--leftBarFontSize: 18px;
 	}
 
 	html 
@@ -305,15 +300,6 @@ You can adjust the min-width numbers below, and add as many new media queries as
 /* For large desktop screen. */
 @media all and (min-width: 1400px) 
 {
-	:root 
-	{
-		--topBarHeight: 125px;
-		--leftBarWidth: 125px;
-
-		--topBarFontSize: 20px;
-		--leftBarFontSize: 20px;
-	}
-
 	html 
 	{
 		font-size: 1.25em;
