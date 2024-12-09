@@ -25,7 +25,7 @@ body
 
 #container 
 {
-	width: 50vw;
+	width: 90vw;
 	background: linear-gradient(
 		180deg, 
 		rgb(16, 16, 16) 0%, 
@@ -86,11 +86,17 @@ You can adjust the min-width numbers below, and add as many new media queries as
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) 
 {
-	
+	#container
+	{
+		width: 70vw;
+	}
 } /* closes 769px+ */
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) 
 {
-	
+	#container
+	{
+		width: 50vw;
+	}
 } /* closes 1024px+ */

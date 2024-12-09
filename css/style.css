@@ -9,10 +9,11 @@ html, body
 /* Standard text-settings below */
 html 
 {
-	font-size: 1em;
-    line-height: 0.75em;
+	font-size: 0.67em;
+    line-height: 0.5025em;
 }
 
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
 body 
 {
 	font-family: Consolas, "Courier New", Courier, monospace;
@@ -58,3 +59,28 @@ button
 	width: 5em;
 	height: 2em;
 }
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) 
+{
+	html 
+	{
+		font-size: 0.75em;
+		line-height: 0.5625em;
+	}
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) 
+{
+	html 
+	{
+		font-size: 1em;
+		line-height: 0.75em;
+	}
+} /* closes 1024px+ */
