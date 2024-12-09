@@ -2,51 +2,96 @@
 
 <html>
 	<head>
+		
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		
-		<title>Echo's Class Portfolio</title>
+		<title>Echo Command Prompt</title>
 		
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css">	
 
 		<script src="js/script.js"></script>
+		
 	</head>
 
 	<body>
 		<div id="container">
 			<header>
-				<h1>Echo's Class Portfolio</h1>
-				<h2>Web Development I - Fall 2024</h2>
+				<p>Echo Command Prompt [Version 10.0.26100.2314]</p>
+				<p>(c) Echo Schwartz. All rights reserved.</p>
+				<br>
 			</header>
-			
-			<nav class="horizontal">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about_me.html">About Me</a></li>
-				  	<li><a href="assignments.html">Assignments</a></li>
-				  	<li><a href="final_project.html">Final Project</a></li>
-			  </ul>
-			</nav>
-			
-			<main>
-				<figure>
-					<img src="img/columbia_college_chicago_web_development.webp" alt="A person working on a laptop in a busy Web Development Class at Columbia College Chicago.">
-					<figcaption>
-						<a href="https://www.colum.edu/academics/programs/minors/web-development-minor">Columbia College Chicago's Web Development Class</a>
-					</figcaption>
-				</figure>
 
-				<p>
-					Welcome to my portfolio website for my Web Development I class! 
-					Please feel free to explore and find out all about my web work.
-					<br>
-					- Echo
-				</p>
-			</main>
-			
-			<footer>
-				<p><span id="footer"></span></p>
-				<script>setElement("footer", getFooter())</script>
-			</footer>	
+			<body>
+				<p>C:\Users\Echo>cd Documents</p>
+				<br>
+				<p>C:\Users\Echo\Documents>cd portfolios</p>
+				<br>
+				<p>C:\Users\Echo\Documents\portfolios>dir</p>
+				<p class="tab2">Volume in drive C is Windows</p>
+				<p class="tab2">Volume Serial Number is AIRL-1646</p>
+				<br>
+				<p class="tab2">Directory of C:\Users\Echo\Documents\portfolios</p>
+				<br>
+				<p><pre><span class="datetime"></span>    &lt;DIR&gt;          .</pre></p>
+				<p><pre><span class="datetime"></span>    &lt;DIR&gt;          ..</pre></p>
+				<p><pre><span class="datetime"></span>    &lt;DIR&gt;          web-development-1</pre></p>
+				<p><pre><span class="datetime"></span>    &lt;DIR&gt;          programming-2</pre></p>
+				<p><pre class="tab15">0 File(s)              0 bytes</pre></p>
+				<p><pre class="tab15">2 Dir(s)  234,500,000,000 bytes free</pre></p>
+				<br>
+				<p>C:\Users\YourName\Documents\portfolios>cd
+					<select id="portfolioSelect">
+					<option value="web-development-1">web-development-1</option>
+					<option value="programming-2">programming-2</option>
+				</select>
+				<button onclick="cd()">&crarr;</button></p>
+			</body>
+
+			<script>
+				function formatDate(date) 
+				{
+					// Get day, month, and year
+					const day = String(date.getDate()).padStart(2, '0');
+					const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+					const year = date.getFullYear();
+
+					// Get hours and minutes in 12-hour format with AM/PM
+					let hours = date.getHours();
+					const minutes = String(date.getMinutes()).padStart(2, '0');
+					const ampm = hours >= 12 ? 'PM' : 'AM';
+					hours = hours % 12;
+					hours = hours ? String(hours).padStart(2, '0') : '12'; // Adjust for 12-hour format
+
+					// Combine all parts into the desired format
+					return `${month}/${day}/${year}  ${hours}:${minutes} ${ampm}`;
+				}
+
+				// Get the current datetime
+				const now = new Date();
+
+				// Get all elements with the class "datetime"
+				const elements = document.querySelectorAll(".datetime");
+
+				// Iterate over each element and perform actions
+				elements.forEach(element => {
+					element.innerHTML = formatDate(now)
+				});
+
+				// Function to get the selected value and go to the page
+				function cd() 
+				{
+					const selectedPortfolio = document.getElementById("portfolioSelect").value;
+					window.location.href = `${selectedPortfolio}/index.html`;
+				}
+
+				// Event listener for Enter key press
+				document.getElementById("portfolioSelect").addEventListener("keydown", function(event) {
+				if (event.key === "Enter")
+					cd(); // Call the function when Enter is pressed
+				});
+			</script>
 		</div><!-- close "container" -->
 	</body>
-</html>
+</html> 

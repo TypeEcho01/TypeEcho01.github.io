@@ -1,0 +1,96 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body 
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+/* Standard text-settings below */
+html 
+{
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+body 
+{
+	font-family: Arial, Helvetica, sans-serif;
+	background: #000050; /* Fallback color if backrgound image fails to load */
+	background: url(../img/background.webp) no-repeat fixed center;
+	background-size: cover;
+	padding-top: 2.5vh;
+}
+
+#container 
+{
+	width: 50vw;
+	background: linear-gradient(
+		180deg, 
+		rgb(16, 16, 16) 0%, 
+		rgb(48, 48, 48) 50%, 
+		rgb(16, 16, 16) 100%
+	);
+	border: 5px solid #000000;
+	margin: auto;
+	padding: 10px;
+	color: #ffffff;
+}
+
+figure 
+{
+	margin: 0px;
+	width: 100%;
+}
+
+figure img 
+{
+	width: 100%;
+}
+
+h1, h2
+{
+	text-align: center;
+}
+
+footer 
+{
+	text-align: right;
+	font-size: 0.75em;
+}
+
+button 
+{
+	background: #000000;
+	color: #dddddd;
+	border: 2px solid #444444;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	transition: 250ms;
+}
+
+button:hover 
+{
+	background: #111111;
+	color: #ffffff;
+	border: 2px solid #555555;
+}
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) 
+{
+	
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) 
+{
+	
+} /* closes 1024px+ */

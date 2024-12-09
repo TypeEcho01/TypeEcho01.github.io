@@ -1,4 +1,4 @@
-// main.js
+// script.js
 // Uses jQuery version 3.7.1
 
 const screenBreakpoints = {

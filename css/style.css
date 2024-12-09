@@ -10,128 +10,51 @@ html, body
 html 
 {
 	font-size: 1em;
-    line-height: 1.4em;
+    line-height: 0.75em;
 }
 
 body 
 {
-	font-family: Helvetica, Arial, sans-serif;
-	background: linear-gradient(
-		180deg, 
-		rgb(48, 48, 48) 0%, 
-		rgb(16, 16, 16) 50%, 
-		rgb(48, 48, 48) 100%
-	);
-	color: rgb(255, 255, 255);
-	margin: 5vh 5vw;
+	font-family: Consolas, "Courier New", Courier, monospace;
+	background: #000000;
+	color: #ffffff;
+	text-overflow: inherit;
+	padding-left: 10px;
 }
 
-#container 
+pre 
 {
-	background: none;
-	width: 100%;
-	margin: auto;
-	padding: 1vh 1vw;
+	font-family: Consolas, "Courier New", Courier, monospace;
 }
 
-header
+.tab2 
 {
-	text-align: center;
+	margin-left: 1em;
 }
 
-main header
+.tab15 
 {
-	text-align: left;
+	margin-left: 14em;
 }
 
-nav.horizontal
+select 
 {
-	text-align: center;
+	font-family: Consolas, "Courier New", Courier, monospace;
+	background: #222222;
+	color: #ffffff;
+	border: 1px solid #000000;
+	font-size: 1em;
+    line-height: 0.75em;
 }
 
-nav ul
+button 
 {
-	list-style: none;
-	padding-left: 0px;
+	font-family: Consolas, "Courier New", Courier, monospace;
+	background: #222222;
+	color: #ffffff;
+	border: 1px solid #000000;
+	font-size: 1em;
+    line-height: 0.75em;
+	width: 5em;
+	height: 2em;
 }
-
-nav.horizontal li
-{
-	display: inline;
-}
-
-a
-{
-	color: rgb(0, 191, 255);
-}
-
-a:hover
-{
-	color: rgb(140, 140, 255);
-}
-
-nav a
-{
-	border: 1px solid rgb(191, 191, 191);
-	background: linear-gradient(
-		180deg, 
-		rgb(48, 48, 48) 0%, 
-		rgb(16, 16, 16) 50%, 
-		rgb(48, 48, 48) 100%
-	);
-	text-decoration: none;
-	padding: 0.4em;
-	display: inline-block;
-	border-radius: 10%;
-	transition: 500ms;
-}
-
-nav a:hover
-{
-	color: rgb(0, 255, 255);
-	border: 1px solid rgb(255, 255, 255);
-	background: linear-gradient(
-		180deg, 
-		rgb(64, 64, 64) 0%, 
-		rgb(32, 32, 32) 50%, 
-		rgb(64, 64, 64) 100%
-	);
-	transition: 500ms;
-}
-
-figure
-{
-	margin: 0px;
-}
-
-figure img
-{
-	width: 100%;
-	border: 1px solid rgb(0, 0, 0);
-}
-
-figcaption
-{
-	font-size: 0.75em;
-}
-
-footer
-{
-	font-size: 0.67em;
-}
-
-/* Minimum width for desktop screens. */
-@media all and (min-width: 1024px) 
-{
-	#container
-	{
-		border: 1px solid rgb(0, 0, 0);
-		width: 1024px;
-		background: linear-gradient(
-			180deg, 
-			rgb(64, 64, 64) 0%, 
-			rgb(96, 96, 96) 50%, 
-			rgb(64, 64, 64) 100%
-		);
-	}
-} /* closes 1024px+ */
