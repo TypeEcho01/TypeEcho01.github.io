@@ -10,11 +10,12 @@
 	--white: rgba(255, 255, 255, 1);
 	--black: rgba(0, 0, 0, 1);
 
-	--topBarHeight: 100px;
-	--leftBarWidth: 100px;
+	--topBarHeight: 60px;
+	--leftBarWidth: 60px;
 
-	--topBarFontSize: 15px;
-	--leftBarFontSize: 15px;
+	--topBarFontSize: 10px;
+	--leftBarFontSize: 10px;
+	--leftBarLineHeight: 15px;
 
 	--fontFamilies: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", "Roboto", "Arial", sans-serif;
 }
@@ -41,18 +42,13 @@ h1
 {
 	font-size: 4em;
 	line-height: 1em;
+	color: var(--turquoise);
 }
 
 footer 
 {
 	justify-self: right;
 	font-size: 0.5em;
-}
-
-figure figcaption 
-{
-	font-size: 0.75em;
-    line-height: 1.05em;
 }
 
 body 
@@ -73,6 +69,13 @@ a
 figure
 {
 	margin: 0px;
+}
+
+figure figcaption 
+{
+	font-size: 0.75em;
+    line-height: 1.05em;
+	color: var(--purple);
 }
 
 figure img
@@ -156,6 +159,8 @@ img.placeholder
 	font-size: var(--leftBarFontSize);
 	font-family: var(--fontFamilies);
 	transition: 250ms;
+	white-space: pre; /* Preserve formatting and line breaks */
+	line-height: var(--leftBarLineHeight);
 }
 
 #topBar button:hover, #leftBar a:hover
@@ -173,6 +178,11 @@ img.placeholder
 {
 	width: 100%;
 	aspect-ratio: 1 / 1; /* Forces the figure to be a square */
+}
+
+#rightSection figure img, #rightSection figure form
+{
+	border: 2px solid var(--purple);
 }
 
 .lightBlueBox, .turquoiseBox, .purpleBox, .darkPurpleBox
@@ -208,6 +218,17 @@ img.placeholder
 	color: var(--purple);
 }
 
+button 
+{
+	font-family: var(--fontFamilies);
+	background: var(--turquoise);
+}
+
+form 
+{
+	background: var(--lightBlue);
+}
+
 /* ========================================
 MEDIA QUERIES!
 You can adjust the min-width numbers below, and add as many new media queries as you need.
@@ -216,6 +237,16 @@ You can adjust the min-width numbers below, and add as many new media queries as
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) 
 {
+	:root 
+	{
+		--topBarHeight: 80px;
+		--leftBarWidth: 80px;
+
+		--topBarFontSize: 12px;
+		--leftBarFontSize: 12px;
+		--leftBarLineHeight: 20px;
+	}
+
 	#container
 	{
 		padding: 20px;
@@ -257,11 +288,12 @@ You can adjust the min-width numbers below, and add as many new media queries as
 {
 	:root 
 	{
-		--topBarHeight: 115px;
-		--leftBarWidth: 115px;
+		--topBarHeight: 100px;
+		--leftBarWidth: 100px;
 
-		--topBarFontSize: 18px;
-		--leftBarFontSize: 18px;
+		--topBarFontSize: 15px;
+		--leftBarFontSize: 15px;
+		--leftBarLineHeight: 25px;
 	}
 
 	html 
@@ -300,6 +332,16 @@ You can adjust the min-width numbers below, and add as many new media queries as
 /* For large desktop screen. */
 @media all and (min-width: 1400px) 
 {
+	:root 
+	{
+		--topBarHeight: 120px;
+		--leftBarWidth: 120px;
+
+		--topBarFontSize: 17px;
+		--leftBarFontSize: 17px;
+		--leftBarLineHeight: 30px;
+	}
+
 	html 
 	{
 		font-size: 1.25em;

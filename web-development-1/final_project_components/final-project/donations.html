@@ -15,6 +15,36 @@
 	
 		<script src="js/jQuery/jquery-3.7.1.min.js"></script> <!-- jQuery file -->
 		<script src="js/script.js"></script> <!-- JavaScript file -->
+
+		<script>
+			function submitForm(event) 
+			{
+				event.preventDefault(); // Prevent the form from actually submitting
+				const amount = parseFloat(document.getElementById("amount").value); // Cast the input to a number
+				
+				// Check the amount and display a different message
+				if (amount < 100) 
+				{
+					alert(`Thank you for your donation of $${amount}! Any amount helps us keep changing the world!`);
+					return;
+				} 
+				if (amount < 1000) 
+				{
+					alert(`Thank you for donation of $${amount}! We will make great use of this help!`);
+					return;
+				}
+				if (amount < 10000)
+				{
+					alert(`You are not very financially responsible, but we really appreciate your huge donation of $${amount}!`);
+					return;
+				}
+				alert(`...are you going to go bankrupt?`);
+
+				// Clear the input field after submission
+				document.getElementById("amount").value = "";
+			}
+		</script>
+
 	</head>
 
 	<body>
@@ -29,9 +59,32 @@
 				<br>
 
 				<main>
-					<div class="turquoiseBox">
-						<h1>Donations are temporarily down. We apologize for the inconvenience.</h1>
-					</div>
+					<p class="turquoiseBox">
+						Will you choose to be in the small percent that donates? 
+						According to our statistics, less than 3% of users donate to us. 
+						Donations help us continue to do research and develop new technologies. 
+						Please, if you have the time, consider donating even just a small amount.
+					</p>
+					
+					<br>
+					
+					<p class="lightBlueBox">
+						Wondering what we do with your donations? 
+						We split it between doing more research on clones and how they work, 
+						as well as making new iterations of our cloning technology. 
+						With each donation, cloning gets cheaper and more accessable. 
+						Consider it not just a donation to us, but also to the future!
+					</p>
+					
+					<br>
+					
+					<p class="turquoiseBox">
+						Here at Echo: Cloning Industries, we do not believe in credit or debit cards. 
+						Simply enter in the amount you'd like to donate and we will come collect it from you! 
+						If you're wonder how we know where to get the money from, we aren't the number one 
+						technology company for nothing! Rest assured that your donation will be in safe hands 
+						and recieved within a day of recieving the request.
+					</p>
 				</main>
 			</section>
 
@@ -40,10 +93,18 @@
 			<section id="rightSection">
 				<main>
 					<figure>
-						<img src="img/logo/partial-logo.png" alt="Echo: Cloning Industries partial logo.">
+						<!-- Uses JavaScript and not jQuery since it's just one small function for this one page -->
+						<form onsubmit="submitForm(event)">
+							<h2>Donate to Echo: Cloning Industries</h2>
+							<h3>Your support is greatly appreciated! Please enter a donation amount below.</h3>
+							<label for="amount">Amount: $</label>
+							<input type="number" id="amount" name="amount" step="0.01" min="0" required>
+							<button type="submit">Submit</button>
+						</form>
 					</figure>
 					<figure>
-						<img src="img/logo/partial-logo.png" alt="Echo: Cloning Industries partial logo.">
+						<img src="img/donations/money.jpg" alt="A bunch of money.">
+						<figcaption>Any donation, no matter how big or small, is greatly appreciated!</figcaption>
 					</figure>
 				</main>
 				</main>

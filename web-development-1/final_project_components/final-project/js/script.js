@@ -33,7 +33,8 @@ function getFooterHtml()
     return `&#169; Echo Schwartz, ${new Date().getFullYear()}`;
 }
 
-function getTopBar() {
+function getTopBar() 
+{
     // Create the top bar container
     let $topBar = $("<div>", { id: "topBar" });
 
@@ -51,7 +52,8 @@ function getTopBar() {
     return $topBar;
 }
 
-function getLeftBar() {
+function getLeftBar() 
+{
     // Create the left bar container
     let $leftBar = $("<div>", { id: "leftBar" });
 
@@ -61,14 +63,43 @@ function getLeftBar() {
     let $navItems = [
         $("<li>").append($("<figure>")
             .append($("<img>", { src: "img/logo/logo.png", alt: "Echo: Cloning Industries logo" }))),
-        $("<li>").append($("<a>", { href: "index.html" }).text("Home")),
-        $("<li>").append($("<a>", { href: "appointment.html" }).text("Appointment")),
-        $("<li>").append($("<a>", { href: "about.html" }).text("About")),
-        $("<li>").append($("<a>", { href: "tribute.html" }).text("Tribute")),
-        $("<li>").append($("<a>", { href: "reviews.html" }).text("Reviews")),
-        $("<li>").append($("<a>", { href: "research.html" }).text("Research")),
-        $("<li>").append($("<a>", { href: "donations.html" }).text("Donations"))
+        $("<li>").append($("<a>", { href: "index.html" }).text(
+    `/  \\
+/____\\
+|____|
+Home`)),
+        $("<li>").append($("<a>", { href: "appointment.html" }).text(
+    `/     Jan    \\
+|1 2 3 4 5 6 |
+\\            /
+Appointment`)),
+        $("<li>").append($("<a>", { href: "about.html" }).text(
+    `____
+|   ?  |
+|____|
+About`)),
+        $("<li>").append($("<a>", { href: "tribute.html" }).text(
+    `.-'''-.
+|       |
+'-...-'
+Tribute`)),
+        $("<li>").append($("<a>", { href: "reviews.html" }).text(
+    `/\\
+|  |
+\\/
+Reviews`)),
+        $("<li>").append($("<a>", { href: "research.html" }).text(
+    `_______
+| R&D |
+|______|
+Research`)),
+        $("<li>").append($("<a>", { href: "donations.html" }).text(
+    `|  |
+/ $$$ \\
+\\______/
+Donations`))
     ];
+    
 
     // Append navigation items to the list
     $ul.append($navItems);
